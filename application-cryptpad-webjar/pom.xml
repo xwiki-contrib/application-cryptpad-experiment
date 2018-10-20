@@ -27,23 +27,32 @@
     <artifactId>application-cryptpad</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>application-cryptpad-script</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>Cryptpad Application - Script Service</name>
-  <dependencies>
-    <!-- Project dependencies -->
-    <dependency>
-      <groupId>org.xwiki.contrib</groupId>
-      <artifactId>application-cryptpad-importer</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-    <!-- Platform dependencies -->
-    <dependency>
-      <groupId>org.xwiki.commons</groupId>
-      <artifactId>xwiki-commons-script</artifactId>
-      <version>${commons.version}</version>
-    </dependency>
-  </dependencies>
+  <packaging>jar</packaging>
+  <artifactId>application-cryptpad-webjar</artifactId>
+  <name>Cryptpad Application WebJar</name>
+  <description>Packages JS resources needed for the Cryptpad Application in a single WebJar.</description>
+  <properties>
+    <!-- Name to display by the Extension Manager -->
+    <xwiki.extension.name>Cryptpad WebJar</xwiki.extension.name>
+    <!-- Explicitely indicate it's a webjar -->
+    <xwiki.extension.jar.type>webjar</xwiki.extension.jar.type>
+    <!-- No Java code here -->
+    <xwiki.clirr.skip>true</xwiki.clirr.skip>
+  </properties>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <configuration>
+            <archive>
+              <!-- Cancel custom MANIFEST file (since it's not generated for "webjar" packaging) -->
+              <manifestFile combine.self="override" />
+            </archive>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
-

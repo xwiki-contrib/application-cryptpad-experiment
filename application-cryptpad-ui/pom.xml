@@ -30,6 +30,10 @@
   <artifactId>application-cryptpad-ui</artifactId>
   <name>Cryptpad Application - UI</name>
   <packaging>xar</packaging>
+  <properties>
+    <!-- The name to show in the extension manager -->
+    <xwiki.extension.name>Cryptpad Application</xwiki.extension.name>
+  </properties>
   <description>Generic set of wiki pages for the Cryptpad Application</description>
   <dependencies>
     <dependency>

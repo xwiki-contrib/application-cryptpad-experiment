@@ -31,6 +31,31 @@
   <version>1.0-SNAPSHOT</version>
   <name>Cryptpad Application - Importer</name>
   <dependencies>
+    <!-- Project dependencies -->
+    <dependency>
+      <groupId>org.xwiki.contrib</groupId>
+      <artifactId>application-cryptpad-api</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.contrib</groupId>
+      <artifactId>application-cryptpad-webjar</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <!-- Platform dependencies -->
+    <dependency>
+      <groupId>org.xwiki.commons</groupId>
+      <artifactId>xwiki-commons-component-api</artifactId>
+      <version>${commons.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-model</artifactId>
+      <version>${platform.version}</version>
+    </dependency>
+
+    <!-- External dependencies -->
     <dependency>
       <groupId>com.coveo</groupId>
       <artifactId>nashorn-commonjs-modules</artifactId>

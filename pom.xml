@@ -59,9 +59,11 @@
     <commonjs.version>1.0.9</commonjs.version>
   </properties>
   <modules>
+    <module>application-cryptpad-api</module>
     <module>application-cryptpad-importer</module>
     <module>application-cryptpad-script</module>
     <module>application-cryptpad-ui</module>
+    <module>application-cryptpad-webjar</module>
   </modules>
 </project>
 
